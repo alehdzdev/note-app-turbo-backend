@@ -1,4 +1,5 @@
 # Third Party
+from drf_spectacular.utils import extend_schema, OpenApiResponse
 from rest_framework import status
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
@@ -13,6 +14,16 @@ class RegisterView(APIView):
 
     permission_classes = (AllowAny,)
 
+    @extend_schema(
+        summary="Register a new user",
+        description="Creates a new user account with email and password. No authentication required.",
+        request=RegisterSerializer,
+        responses={
+            201: RegisterSerializer,
+            400: OpenApiResponse(description="Validation error"),
+        },
+        tags=["auth"],
+    )
     def post(self, request):
         serializer = RegisterSerializer(data=request.data)
         if not serializer.is_valid():
