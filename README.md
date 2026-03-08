@@ -9,7 +9,7 @@ REST API for a note-taking app built as a job assessment. Consumed by the Next.j
 | Framework | Django 5 + Django REST Framework |
 | Database | PostgreSQL 16 |
 | Auth | SimpleJWT (access + refresh tokens) |
-| Config | python-decouple |
+| Config | django-environ |
 | Containerization | Docker + docker-compose |
 | Testing | pytest + pytest-django |
 
