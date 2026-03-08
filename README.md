@@ -19,6 +19,7 @@ All endpoints are prefixed with `/api/v1/`.
 
 | Method | Endpoint | Auth | Description |
 |---|---|---|---|
+| GET | `/health/` | No | Service health check |
 | POST | `/auth/register/` | No | Register a new user |
 | POST | `/auth/login/` | No | Login, returns access + refresh JWT |
 | POST | `/auth/refresh/` | No | Refresh access token |
