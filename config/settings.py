@@ -146,3 +146,4 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 CORS_ALLOWED_ORIGINS = env.list("CORS_ALLOWED_ORIGINS", default=[])
+CORS_ALLOW_CREDENTIALS = True
