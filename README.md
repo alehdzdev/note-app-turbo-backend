@@ -9,9 +9,20 @@ REST API for a note-taking app built as a job assessment. Consumed by the Next.j
 | Framework | Django 5 + Django REST Framework |
 | Database | PostgreSQL 16 |
 | Auth | SimpleJWT (access + refresh tokens) |
+| API Docs | drf-spectacular (OpenAPI 3, Swagger UI, ReDoc) |
 | Config | django-environ |
 | Containerization | Docker + docker-compose |
 | Testing | pytest + pytest-django |
+
+## API Documentation
+
+Interactive docs are available when the server is running:
+
+| UI | URL |
+|---|---|
+| Swagger UI | `/api/schema/swagger/` |
+| ReDoc | `/api/schema/redoc/` |
+| OpenAPI schema (JSON/YAML) | `/api/schema/` |
 
 ## API Endpoints
 
